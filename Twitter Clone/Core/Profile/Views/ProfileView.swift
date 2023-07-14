@@ -112,21 +112,10 @@ extension ProfileView {
                 }.font(.caption)
                     .foregroundColor(.gray)
             }
+//
 
-            HStack(spacing: 4) {
-                HStack {
-                    Text("807").bold()
-                    Text("Following")
-                        .font(.subheadline)
-                }
-
-                HStack {
-                    Text("6.5M").bold()
-                    Text("Followers")
-                        .font(.subheadline)
-                }
-            }
-            .padding(.vertical)
+            UserStatsView()
+                .padding(.vertical)
         }
         .padding(.horizontal)
     }
