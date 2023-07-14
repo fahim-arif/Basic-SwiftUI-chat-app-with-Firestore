@@ -19,6 +19,8 @@
 		DD49A6242A56408E00C9FD34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD49A6232A56408E00C9FD34 /* Preview Assets.xcassets */; };
 		DD49A6332A5641CC00C9FD34 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49A6322A5641CC00C9FD34 /* FeedView.swift */; };
 		DD49A6362A5643B400C9FD34 /* TweetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD49A6352A5643B400C9FD34 /* TweetRowView.swift */; };
+		DD9ABCC52A60DE1800963F13 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9ABCC42A60DE1800963F13 /* UserRowView.swift */; };
+		DDEC430C2A60BF0100A3E179 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC430B2A60BF0100A3E179 /* TweetFilterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DD49A6232A56408E00C9FD34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD49A6322A5641CC00C9FD34 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		DD49A6352A5643B400C9FD34 /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
+		DD9ABCC42A60DE1800963F13 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		DDEC430B2A60BF0100A3E179 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,8 @@
 		DD1B5B712A602F1B00291264 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				DD1B5B752A602F6100291264 /* ExploreView.swift */,
+				DD9ABCC22A60DDCD00963F13 /* Views */,
+				DD9ABCC12A60DDB300963F13 /* ViewModel */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 		DD1B5B7B2A60348B00291264 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DDEC430B2A60BF0100A3E179 /* TweetFilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 		DD49A62E2A56412000C9FD34 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DD9ABCC32A60DE0200963F13 /* Users */,
 				DD49A6342A56436D00C9FD34 /* Tweets */,
 			);
 			path = Components;
@@ -219,6 +226,29 @@
 			path = Tweets;
 			sourceTree = "<group>";
 		};
+		DD9ABCC12A60DDB300963F13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD9ABCC22A60DDCD00963F13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD1B5B752A602F6100291264 /* ExploreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD9ABCC32A60DE0200963F13 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				DD9ABCC42A60DE1800963F13 /* UserRowView.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,6 +259,7 @@
 				DD49A6152A56408D00C9FD34 /* Sources */,
 				DD49A6162A56408D00C9FD34 /* Frameworks */,
 				DD49A6172A56408D00C9FD34 /* Resources */,
+				DDEC430A2A606BD100A3E179 /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -284,6 +315,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DDEC430A2A606BD100A3E179 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD49A6152A56408D00C9FD34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -297,7 +349,9 @@
 				DD49A6362A5643B400C9FD34 /* TweetRowView.swift in Sources */,
 				DD49A6332A5641CC00C9FD34 /* FeedView.swift in Sources */,
 				DD49A61D2A56408D00C9FD34 /* Twitter_CloneApp.swift in Sources */,
+				DDEC430C2A60BF0100A3E179 /* TweetFilterViewModel.swift in Sources */,
 				DD1B5B6E2A60235F00291264 /* MainTabView.swift in Sources */,
+				DD9ABCC52A60DE1800963F13 /* UserRowView.swift in Sources */,
 				DD1B5B782A602F7000291264 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

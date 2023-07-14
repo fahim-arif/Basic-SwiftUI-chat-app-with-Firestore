@@ -9,15 +9,14 @@ import SwiftUI
 
 struct Demo: View {
     var body: some View {
-        VStack (alignment: .leading) {
-            HStack (alignment: .top) {
+        VStack(alignment: .leading) {
+            HStack(alignment: .top) {
                 Circle()
-                    .frame( width: 56, height: 56 )
+                    .frame(width: 56, height: 56)
                     .foregroundColor(Color(.systemBlue))
-                
-                
+
                 VStack {
-                    Text ("Hello")
+                    Text("Hello")
                     Text("world")
                 }
             }

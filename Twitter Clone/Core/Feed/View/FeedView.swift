@@ -9,10 +9,8 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-       
-        
         ScrollView {
-            LazyVStack(spacing:0) {
+            LazyVStack(spacing: 0) {
                 ForEach(0 ... 20, id: \.self) { _ in
                     TweetRowView()
                         .padding()
