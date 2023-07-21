@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD050C7C2A61DF3D002946C7 /* NewTweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD050C7B2A61DF3D002946C7 /* NewTweetView.swift */; };
+		DD050C7F2A61E058002946C7 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD050C7E2A61E058002946C7 /* TextArea.swift */; };
 		DD1B5B6B2A60145000291264 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1B5B6A2A60145000291264 /* Demo.swift */; };
 		DD1B5B6E2A60235F00291264 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1B5B6D2A60235F00291264 /* MainTabView.swift */; };
 		DD1B5B762A602F6100291264 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1B5B752A602F6100291264 /* ExploreView.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD050C7B2A61DF3D002946C7 /* NewTweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetView.swift; sourceTree = "<group>"; };
+		DD050C7E2A61E058002946C7 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		DD1B5B6A2A60145000291264 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		DD1B5B6D2A60235F00291264 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		DD1B5B752A602F6100291264 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		DD49A6352A5643B400C9FD34 /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
 		DD67D35A2A61768100F93FA7 /* SideMenuOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionRowView.swift; sourceTree = "<group>"; };
 		DD9ABCC42A60DE1800963F13 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		DDBB6C452A671D3A006A17BD /* Twitter CloneRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Twitter CloneRelease.entitlements"; sourceTree = "<group>"; };
 		DDD66D062A616A03005F11B5 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		DDD66D082A616A15005F11B5 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
 		DDD66D0A2A616A26005F11B5 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
@@ -62,6 +67,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD050C782A61DF23002946C7 /* UploadTweet */ = {
+			isa = PBXGroup;
+			children = (
+				DD050C7A2A61DF33002946C7 /* Views */,
+				DD050C792A61DF2C002946C7 /* ViewModels */,
+			);
+			path = UploadTweet;
+			sourceTree = "<group>";
+		};
+		DD050C792A61DF2C002946C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DD050C7A2A61DF33002946C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD050C7B2A61DF3D002946C7 /* NewTweetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DD1B5B6C2A60234800291264 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +168,7 @@
 		DD49A61B2A56408D00C9FD34 /* Twitter Clone */ = {
 			isa = PBXGroup;
 			children = (
+				DDBB6C452A671D3A006A17BD /* Twitter CloneRelease.entitlements */,
 				DD49A62D2A56411500C9FD34 /* Core */,
 				DD49A62C2A56410100C9FD34 /* Extensions */,
 				DD49A62B2A5640F800C9FD34 /* Model */,
@@ -183,6 +213,8 @@
 		DD49A62D2A56411500C9FD34 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				DD49A62E2A56412000C9FD34 /* Components */,
+				DD050C782A61DF23002946C7 /* UploadTweet */,
 				DDD66D032A6169D6005F11B5 /* SideMenu */,
 				DD1B5B742A602F4D00291264 /* Messages */,
 				DD1B5B732A602F4100291264 /* Notifications */,
@@ -190,7 +222,6 @@
 				DD1B5B712A602F1B00291264 /* Explore */,
 				DD1B5B6C2A60234800291264 /* MainTab */,
 				DD49A62F2A56412300C9FD34 /* Feed */,
-				DD49A62E2A56412000C9FD34 /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -200,6 +231,7 @@
 			children = (
 				DD9ABCC32A60DE0200963F13 /* Users */,
 				DD49A6342A56436D00C9FD34 /* Tweets */,
+				DD050C7E2A61E058002946C7 /* TextArea.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -382,6 +414,7 @@
 			files = (
 				DD1B5B762A602F6100291264 /* ExploreView.swift in Sources */,
 				DD49A61F2A56408D00C9FD34 /* ContentView.swift in Sources */,
+				DD050C7F2A61E058002946C7 /* TextArea.swift in Sources */,
 				DD1B5B7E2A6034AD00291264 /* ProfileView.swift in Sources */,
 				DDD66D092A616A15005F11B5 /* SideMenuRowView.swift in Sources */,
 				DDD66D072A616A03005F11B5 /* SideMenuView.swift in Sources */,
@@ -393,6 +426,7 @@
 				DD67D35B2A61768100F93FA7 /* SideMenuOptionRowView.swift in Sources */,
 				DD49A61D2A56408D00C9FD34 /* Twitter_CloneApp.swift in Sources */,
 				DDEC430C2A60BF0100A3E179 /* TweetFilterViewModel.swift in Sources */,
+				DD050C7C2A61DF3D002946C7 /* NewTweetView.swift in Sources */,
 				DD1B5B6E2A60235F00291264 /* MainTabView.swift in Sources */,
 				DD9ABCC52A60DE1800963F13 /* UserRowView.swift in Sources */,
 				DDD66D0B2A616A26005F11B5 /* SideMenuViewModel.swift in Sources */,
@@ -551,10 +585,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Twitter Clone/Twitter CloneRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Twitter Clone/Preview Content\"";
-				DEVELOPMENT_TEAM = ULHUG8VDCN;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
